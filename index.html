@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Главная страница</title>
   </head>
-  <body class="body-light">
+  <body class="body-basic">
 
     <haader class="header-page">
-      <div class="haader-container container">
+      <div class="header-page-container container">
         <nav class="navigation">
-          <a class="logo-link-header" href="index.html" aria-current="page">
+          <a class="logo-link" href="index.html" aria-current="page">
             <img src="images/logo.svg" width="137" height="56" alt="Глейси">
           </a>
 
@@ -43,6 +43,7 @@
             <li class="navigation-list-item">
               <a class="navigation-list-link" href="#" >Доставка и оплата</a>
             </li>
+
             <li class="navigation-list-item">
               <a class="navigation-list-link" href="#" >О Компании</a>
             </li>
@@ -71,19 +72,22 @@
               <form class="form-login" action="http://echo.htmlacademy.ru" method="post">
                 <h3 class="small-title form-login-title">Личный кабинет</h3>
 
-                <fieldset class="login-fieldset-group">
-                  <legend class="visually-hidden">Почта</legend>
-                  <label class="visually-hidden" for="login">Введите вашу почту</label>
-                  <input class="form-input form-input-text" type="text" id="login" name="login" placeholder="email@example.com" required>
-                </fieldset>
+                <div class="login-fieldset-wrapper">
+                  <fieldset class="login-fieldset-group">
+                    <legend class="visually-hidden">Почта</legend>
+                    <label class="visually-hidden" for="login">Введите вашу почту</label>
+                    <input class="form-input login-input-text" type="text" id="login" name="login" placeholder="email@example.com" required>
+                  </fieldset>
 
-                <fieldset class="login-fieldset-group">
-                  <legend class="visually-hidden">Пароль</legend>
-                  <label class="visually-hidden" for="password">Введите ваш пароль</label>
-                  <input class="form-input form-input-password" type="password" id="password" name="password" placeholder="***" required>
-                </fieldset>
+                  <fieldset class="login-fieldset-group">
+                    <legend class="visually-hidden">Пароль</legend>
+                    <label class="visually-hidden" for="password">Введите ваш пароль</label>
+                    <input class="form-input login-input-password" type="password" id="password" name="password" placeholder="***" required>
+                  </fieldset>
+                </div>
 
-                <button class="button button-light login-button" type="submit">Войти</button>
+                <div class="login-wrapper">
+                  <button class="button button-light login-button" type="submit">Войти</button>
 
                 <ul class="password-list list-reset">
                   <li class="password-list-item">
@@ -93,9 +97,7 @@
                     <a class="password-list-link" href="#">Регистрация</a>
                   </li>
                 </ul>
-
-
-
+                </div>
               </form>
             </li>
 
@@ -108,8 +110,8 @@
               </a>
 
               <!-- Блок с пустой корзиной -->
-              <div class="basket-container-empty">
-                <span class="basket-empty-desc">Ваша корзина пока пуста</span>
+              <div class="basket-container">
+                <h3 class="small-title">Ваша корзина пока пуста</h3>
               </div>
 
               <!-- Блок корзины c товаром -->
@@ -264,10 +266,6 @@
                 <p class="banners-desc">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="banners-link" href="#">Хочу подарок</a>
               </div>
-
-              <figure class="banners-images">
-                <img src="images/banners/bunner-1.png" width="219" height="268" alt="Малинка даром!">
-              </figure>
             </li>
 
             <li class="banners-list-item">
@@ -276,10 +274,6 @@
                 <p class="banners-desc">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
                 <a class="banners-link" href="#">Хочу подарок</a>
               </div>
-
-              <figure class="banners-images">
-                <img src="images/banners/bunner-2.png" width="219" height="268" alt="Малинка дарМаршмеллоу даром!">
-              </figure>
             </li>
           </ul>
         </div>
@@ -325,15 +319,15 @@
             </li>
 
             <li class="product-list-item">
-              <figure class="card-images">
+              <figure class="product-images">
                 <img src="images/product/photo-3.jpg" width="168" height="168" alt="Черника">
               </figure>
 
-              <h3 class="subtitle card-subtitle">
-                <a class="card-link" href="#">Черника</a>
+              <h3 class="subtitle product-subtitle">
+                <a class="product-link" href="#">Черника</a>
               </h3>
 
-              <p class="card-desc">Фисташковый пломбир с кусочками шоколада</p>
+              <p class="product-desc">Фисташковый пломбир с кусочками шоколада</p>
               <p class="">330&nbsp;₽/кг</p>
 
               <button class="product-basket-button">
@@ -342,16 +336,16 @@
             </li>
 
             <li class="product-list-item">
-              <figure class="card-images">
+              <figure class="product-images">
                 <img src="images/product/photo-4.jpg" width="168" height="168" alt="Бабл-гам">
               </figure>
 
-              <h3 class="subtitle card-subtitle">
-                <a class="card-link" href="#">Бабл-гам</a>
+              <h3 class="subtitle product-subtitle">
+                <a class="product-link" href="#">Бабл-гам</a>
               </h3>
 
               <p class="">Ванильный пломбир со сладкой посыпкой</p>
-              <p class="card-desc">320&nbsp;₽/кг</p>
+              <p class="product-desc">320&nbsp;₽/кг</p>
 
               <button class="product-basket-button">
                 <span class="visually-hidden">Положить в корзину</span>

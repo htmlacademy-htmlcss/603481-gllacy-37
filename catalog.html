@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Каталог</title>
   </head>
-  <body class="body-light">
+  <body class="body-basic">
 
     <haader class="header-page">
-      <div class="haader-container container">
+      <div class="header-page-container container">
         <nav class="navigation">
-          <a class="logo-link-header" href="index.html" aria-current="page">
+          <a class="logo-link" href="index.html">
             <img src="images/logo.svg" width="137" height="56" alt="Глейси">
           </a>
 
@@ -24,7 +24,7 @@
                 <span class="dropdown-menu-title">Новинки</span>
 
                 <li class="dropdown-menu-item">
-                  <a class="dropdown-menu-link dropdown-menu-link-current" href="catalog.html">Сливочное</a>
+                  <a class="dropdown-menu-link dropdown-menu-link-current" aria-current="page" href="catalog.html">Сливочное</a>
                 </li>
 
                 <li class="dropdown-menu-item">
@@ -43,6 +43,7 @@
             <li class="navigation-list-item">
               <a class="navigation-list-link" href="#" >Доставка и оплата</a>
             </li>
+
             <li class="navigation-list-item">
               <a class="navigation-list-link" href="#" >О Компании</a>
             </li>
@@ -50,7 +51,7 @@
 
           <ul class="navigation-user-list list-reset">
             <li class="user-list-item">
-              <a class="user-list-link user-list-link-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+              <a class="user-list-link user-list-link-phone" href="tel:+78005558628">+7&nbsp;800&nbsp;555-86-28</a>
             </li>
 
             <li class="user-list-item user-item-form-search">
@@ -68,22 +69,25 @@
               <a class="user-list-link user-icon-login" href="#">Вход</a>
 
               <!-- Блок с формой Входа -->
-              <form class="form form-login" action="http://echo.htmlacademy.ru" method="post">
+              <form class="form-login" action="http://echo.htmlacademy.ru" method="post">
                 <h3 class="small-title form-login-title">Личный кабинет</h3>
 
-                <fieldset class="login-fieldset-group">
-                  <legend class="visually-hidden">Почта</legend>
-                  <label class="visually-hidden" for="login">Введите вашу почту</label>
-                  <input class="form-input form-input-text" type="text" id="login" name="login" placeholder="email@example.com" required>
-                </fieldset>
+                <div class="login-fieldset-wrapper">
+                  <fieldset class="login-fieldset-group">
+                    <legend class="visually-hidden">Почта</legend>
+                    <label class="visually-hidden" for="login">Введите вашу почту</label>
+                    <input class="form-input login-input-text" type="text" id="login" name="login" placeholder="email@example.com" required>
+                  </fieldset>
 
-                <fieldset class="login-fieldset-group">
-                  <legend class="visually-hidden">Пароль</legend>
-                  <label class="visually-hidden" for="password">Введите ваш пароль</label>
-                  <input class="form-input form-input-password" type="password" id="password" name="password" placeholder="***" required>
-                </fieldset>
+                  <fieldset class="login-fieldset-group">
+                    <legend class="visually-hidden">Пароль</legend>
+                    <label class="visually-hidden" for="password">Введите ваш пароль</label>
+                    <input class="form-input login-input-password" type="password" id="password" name="password" placeholder="***" required>
+                  </fieldset>
+                </div>
 
-                <button class="button button-light login-button" type="submit">Войти</button>
+                <div class="login-wrapper">
+                  <button class="button button-light login-button" type="submit">Войти</button>
 
                 <ul class="password-list list-reset">
                   <li class="password-list-item">
@@ -93,9 +97,7 @@
                     <a class="password-list-link" href="#">Регистрация</a>
                   </li>
                 </ul>
-
-
-
+                </div>
               </form>
             </li>
 
@@ -104,16 +106,16 @@
               <!-- .user-item-basket для корзины c товаром -->
               <a class="user-list-link user-icon-basket" href="#">
                 <span class="visually-hidden">В Корзине:</span>
-                <span class="basket-counter">2 товара</span>
+                <p class="basket-counter">2&nbsp;товара</p>
               </a>
 
               <!-- Блок с пустой корзиной -->
-              <div class="basket-empty">
-                <span class="basket-empty-desc">Ваша корзина пока пуста</span>
+              <div class="basket-container">
+                <h3 class="small-title">Ваша корзина пока пуста</h3>
               </div>
 
               <!-- Блок корзины c товаром -->
-              <div class="form basket-container">
+              <div class="basket-container">
 
                 <h3 class="small-title basket-title">Корзина</h3>
 
@@ -193,11 +195,11 @@
 
             <fieldset class="filter-fieldset-group filter-fieldset-group-price">
               <div class="filter-price">
-                <legend class="filter-form-legend">Цена:</legend>
+                <legend class="filter-form-legend filter-form-legend-price">Цена:</legend>
 
                 <label class="filter-form-label filter-form-label-price">
-                  <input class="filter-form-range" type="number" name="min-price" value="0">
-                  <span class="filter-form-text">₽</span>
+                  <input class="filter-form-range" type="number" name="min-price" value="100">
+                  <span class="filter-form-text">₽ &ndash;</span>
                 </label>
 
                 <label class="filter-form-label filter-form-label-price">
@@ -206,13 +208,13 @@
                 </label>
               </div>
 
-              <div class="form-range">
-                <div class="form-range-scale">
-                  <div class="form-rage-bar" style="left: 24px; width: 56px">
-                    <button class="form-range-toggle form-toggle-min" type="button">
+              <div class="filter-range">
+                <div class="filter-range-scale">
+                  <div class="filter-rage-bar" style="left: 24px; width: 56px">
+                    <button class="filter-range-toggle range-toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="form-range-toggle form-toggle-max" type="button">
+                    <button class="filter-range-toggle range-toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
