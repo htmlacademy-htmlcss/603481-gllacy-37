@@ -1463,11 +1463,18 @@ img {
 }
 
 /* Inner page */
+/* intro */
+.intro-container {
+    padding-top: 32px;
+    padding-bottom: 20px;
+}
+
 /* breadcrumbs */
 .breadcrumbs-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-bottom: 16px;
 
 }
 
@@ -1505,6 +1512,11 @@ img {
 }
 
 /* filter */
+.filter {
+    padding-top: 20px;
+    padding-bottom: 44px;
+}
+
 .filter-fieldset-group {
     padding: 0;
     margin: 0;
@@ -1686,9 +1698,10 @@ img {
 }
 
 /* pagination */
-.wrapper {
+.wrapper-pagination {
     display: flex;
     align-items: center;
+    padding: 41px 0;
 }
 
 .pagination-page {
