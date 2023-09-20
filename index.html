@@ -478,7 +478,7 @@
               <h3 class="contacts-heading">Для заказов по телефону:</h3>
               <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
               <p class="contacts-tip">(с 10 до 20 ежедневно)</p>
-              <a class="contacts-button button button-light" href="#">Форма обратной связи</a>
+              <a class="contacts-button button button-light button-modal-open" href="#">Форма обратной связи</a>
             </div>
           </div>
         </section>
@@ -541,6 +541,31 @@
         </div>
       </footer>
     </div>
-  </body>
 
+    <!-- dialog -->
+    <dialog class="modal-window">
+      <div class="modal-auth">
+        <button class="button-modal-close" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="modal-form-name">Имя и фамилия.</label>
+            <input class="form-input" type="text" id="modal-form-name" name="form-name" placeholder="Имя и фамилия" required>
+
+            <label class="visually-hidden" for="modal-form-email">Телефон.</label>
+            <input class="form-input" type="email" id="modal-form-email" name="form-email" placeholder="email@example.com" required>
+
+            <textarea class="form-input" name="message" placeholder="В свободной форме"></textarea>
+            <button class="modal-button button button-light" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </dialog>
+
+    <script src="js/app.js"></script>
+  </body>
 </html>
