@@ -2265,9 +2265,11 @@ textarea.form-input {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: end;
 }
 
 .pagination-list {
@@ -2327,7 +2329,6 @@ textarea.form-input {
   margin-right: 14px;
 }
 
-
 .pagination-arrow {
   display: inline-block;
   width: 16px;
@@ -2357,7 +2358,6 @@ textarea.form-input {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-
 }
 
 .pagination-arrow-next {
@@ -2389,23 +2389,6 @@ textarea.form-input {
   opacity: 0.3;
   pointer-events: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 .footer-page {
